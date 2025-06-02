@@ -1,4 +1,4 @@
-Project is a spin off of piyush-eon's taskify project, with a bit more functionality. Currently working on sync capabilities and ability to run on Native IOS
+Project is a spin off of piyush-eon's taskify project, with some more functionality. Currently working on sync capabilities and ability to run on Native IOS
 
 # Getting Started with Create React App
 
