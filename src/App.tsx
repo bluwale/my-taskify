@@ -11,11 +11,19 @@ const App: React.FC = () => {
   const [draggedTodo, setDraggedTodo] = useState<Todo | null>(null);
   const [dragSource, setDragSource] = useState<'active' | 'completed' | null>(null);
 
-  const handleAdd = (e: React.FormEvent) => {
+  const handleAdd = (e: React.FormEvent, estimatedTime: number, flair: 'work' | 'school' | 'personal') => {
     e.preventDefault();
 
     if (todo.trim()) {
-      setTodos([...todos, { id: Date.now(), todo: todo.trim(), isDone: false }]);
+      setTodos([...todos, { 
+        id: Date.now(), 
+        todo: todo.trim(), 
+        isDone: false,
+        estimatedTime: estimatedTime,
+        elapsedTime: 0,
+        isRunning: false,
+        flair: flair
+      }]);
       setTodo("");
     }
   };
