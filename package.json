@@ -2,6 +2,18 @@
   "name": "my-taskify",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "ELECTRON_IS_DEV=true electron .",
+    "build-electron": "npm run build && electron-builder",
+    "dist": "npm run build && electron-builder --publish=never"
+  },
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -14,13 +26,31 @@
     "react-icons": "^4.10.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "electron-is-dev": "^3.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "electron": "^25.9.8",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.taskmanagerapp.mytaskify",
+    "productName": "My Taskify",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "public/electron.js"
+    ],
+    "extraResources": [
+      {
+        "from": "node_modules/electron-is-dev",
+        "to": "node_modules/electron-is-dev"
+      }
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -39,9 +69,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5"
   }
 }
