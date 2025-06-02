@@ -1,6 +1,8 @@
+Project is a spin off of piyush-eon's taskify project, with a bit more functionality. Currently working on sync capabilities and ability to run on Native IOS
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Project is a spin off of piyush-eon's taskify project, end goals are to launch a native desktop app and a testflight app for IOS, with sync capability. Have also added timer functionality, as well as more division between tasks.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). 
 
 ## Available Scripts
 
